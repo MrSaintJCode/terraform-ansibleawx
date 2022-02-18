@@ -1,0 +1,7 @@
+- name: Build and deploy AWX
+  hosts: all
+  roles:
+    - {role: awx_config}
+    - {role: awx_deploy, when: "awx_deploy is not defined"}
+    - {role: awx_clean, when: "awx_clean is defined"}
+    - {role: awx_destroy, when: "awx_destroy is defined"}

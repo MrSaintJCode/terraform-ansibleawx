@@ -1,0 +1,5 @@
+localhost ansible_connection=local ansible_python_interpreter="/usr/bin/env python3"
+
+[all:vars]
+awx_deploy=True
+awx_clean=True
